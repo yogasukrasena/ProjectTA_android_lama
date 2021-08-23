@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">TAproject</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Selamat Datang</string>
+    <string name="user">Wayan Puranata</string>
+    <string name="toolsuser">Made Mandala</string>
+    <string name="connect">Connected</string>
+    <string name="disconect">Disconnect</string>
+    <string name="supoort">Supported By</string>
+    <string name="bpm">BPM</string>
+    <string name="blood">SpO2</string>
+    <string name="time">Time</string>
+    <string name="setting">Setting</string>
+    <string name="delete_item">Hapus Semua</string>
+    <string name="fingger">Fingger Print</string>
+    <string name="simpan">Submit</string>
+    <string name="batal">Cancel</string>
+    <string name="sidik_jari">Sidik Jari</string>
+    <string name="tambah_sidikjari">Tambah Sidik Jari</string>
+</resources>

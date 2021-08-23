@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:id="@+id/fingerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/fingerLogo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:alpha="0.4"
+            android:src="@drawable/fingerprint"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_toEndOf="@id/fingerLayout"
+            android:layout_toRightOf="@+id/fingerLayout"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/fingerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sidik_jari"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/fingerLogo"
+            android:layout_toRightOf="@+id/fingerLogo" />
+
+        <TextView
+            android:id="@+id/fingger_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/fingerTitle"
+            android:layout_toRightOf="@+id/fingerTitle" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/delete"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginStart="300dp"
+            android:layout_toEndOf="@id/fingerLayout"
+            android:layout_toRightOf="@+id/fingerLayout"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

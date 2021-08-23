@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "616424804600",
+    "firebase_url": "https://taproject-53d6c-default-rtdb.firebaseio.com",
+    "project_id": "taproject-53d6c",
+    "storage_bucket": "taproject-53d6c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616424804600:android:67fcfd52a5ea7d476eeb0d",
+        "android_client_info": {
+          "package_name": "com.example.taproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "616424804600-c5382e4knaibcreq9m80uack1drg6d5n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRbRB-1ekj8BOwMm67Kr0O5aNpMy2I2gw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "616424804600-c5382e4knaibcreq9m80uack1drg6d5n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

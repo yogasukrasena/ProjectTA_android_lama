@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:id="@+id/spo2Layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/spo_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="87"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@id/spo2Layout"
+            android:layout_toRightOf="@+id/spo2Layout"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/pres_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/spo_min"
+            android:layout_toRightOf="@+id/spo_min"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/pres_min"
+            android:layout_toRightOf="@+id/pres_min" />
+
+        <TextView
+            android:id="@+id/spo_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="70"
+            android:textSize="20sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/separator"
+            android:layout_toRightOf="@+id/separator" />
+
+        <TextView
+            android:id="@+id/pres_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textSize="15sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@id/spo_max"
+            android:layout_toRightOf="@+id/spo_max" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/blood"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/pres_max"
+            android:layout_toRightOf="@+id/pres_max" />
+
+        <TextView
+            android:id="@+id/jam_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jam :"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratmedium"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@id/spo2Layout"
+            android:layout_toRightOf="@+id/spo2Layout"
+            android:layout_below="@id/spo_min"
+            tools:ignore="NotSibling,SmallSp" />
+
+        <TextView
+            android:id="@+id/jam_mulai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15:00"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratlight"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/jam_title"
+            android:layout_toRightOf="@+id/jam_title"
+            android:layout_below="@id/spo_min"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/sep_jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratmedium"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/jam_mulai"
+            android:layout_toRightOf="@+id/jam_mulai"
+            android:layout_below="@id/spo_min"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/jam_akhir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16:00"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratlight"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/sep_jam"
+            android:layout_toRightOf="@+id/sep_jam"
+            android:layout_below="@id/spo_min"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tanggal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal :"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratmedium"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@id/timeLayout"
+            android:layout_toRightOf="@+id/timeLayout"
+            android:layout_below="@id/jam_title"
+            tools:ignore="NotSibling,SmallSp" />
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18/05/2021"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratlight"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/tanggal_title"
+            android:layout_toRightOf="@+id/tanggal_title"
+            android:layout_below="@id/jam_akhir"
+            tools:ignore="SmallSp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

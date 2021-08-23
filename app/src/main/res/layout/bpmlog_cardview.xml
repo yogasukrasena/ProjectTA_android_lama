@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:id="@+id/bpmLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bpm_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="87"
+            android:textSize="25sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@id/bpmLayout"
+            android:layout_toRightOf="@+id/bpmLayout"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="25sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/bpm_min"
+            android:layout_toRightOf="@+id/bpm_min" />
+
+        <TextView
+            android:id="@+id/bpm_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100"
+            android:textSize="25sp"
+            android:fontFamily="@font/montserratsemibold"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/separator"
+            android:layout_toRightOf="@+id/separator" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/heart"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/bpm_max"
+            android:layout_toRightOf="@+id/bpm_max"/>
+
+        <TextView
+            android:id="@+id/jam_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jam :"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratmedium"
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@id/bpmLayout"
+            android:layout_toRightOf="@+id/bpmLayout"
+            android:layout_below="@id/bpm_min"
+            tools:ignore="NotSibling,SmallSp" />
+
+        <TextView
+            android:id="@+id/jam_mulai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15:00"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratlight"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/jam_title"
+            android:layout_toRightOf="@+id/jam_title"
+            android:layout_below="@id/bpm_min"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/sep_jam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratmedium"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/jam_mulai"
+            android:layout_toRightOf="@+id/jam_mulai"
+            android:layout_below="@id/bpm_min"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/jam_akhir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16:00"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratlight"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/sep_jam"
+            android:layout_toRightOf="@+id/sep_jam"
+            android:layout_below="@id/bpm_min"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/tanggal_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal :"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratmedium"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@id/timeLayout"
+            android:layout_toRightOf="@+id/timeLayout"
+            android:layout_below="@id/jam_title"
+            tools:ignore="NotSibling,SmallSp" />
+
+        <TextView
+            android:id="@+id/tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="18/05/2021"
+            android:textSize="10sp"
+            android:fontFamily="@font/montserratlight"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/tanggal_title"
+            android:layout_toRightOf="@+id/tanggal_title"
+            android:layout_below="@id/jam_akhir"
+            tools:ignore="SmallSp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
