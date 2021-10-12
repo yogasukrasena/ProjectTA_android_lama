@@ -5,11 +5,13 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView retrivePengguna;
     private TextView retriveKeluarga;
     private ProgressBar retriveBattery;
+    private boolean device_status = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //call database reference and retrive to view
-        databaseReference = database.getReference("Device_9C:9C:1F:47:B4:FA");
+        databaseReference = database.getReference("Device_50:02:91:C9:DF:C4");
 
         retrivePengguna = findViewById(R.id.namaPengguna);
         retriveKeluarga = findViewById(R.id.namaKeluarga);
@@ -56,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         retriveBattery = findViewById(R.id.power);
         retriveRuntime = findViewById(R.id.time);
         //call function
+        refreshData();
         getData();
 
         //initialize fragment
@@ -112,6 +116,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        final SwipeRefreshLayout pullToRefresh = findViewById(R.id.pullToRefreshMain);
+        pullToRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshData();
+                pullToRefresh.setRefreshing(false);
+            }
+        });
+
         //disable scrollview on maps frame
 //        final ScrollView scrollView = (ScrollView) findViewById(R.id.scrollview);
 //        ImageView transparent = (ImageView) findViewById(R.id.imagetrans);
@@ -138,6 +151,24 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
     }
+    //fungsi untuk melakukan refresh data
+    public void refreshData(){
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                if(device_status){
+                    device_status = false;
+                    databaseReference.child("flag_status").child("status_device").setValue(0);
+                    databaseReference.child("flag_status").child("status_gps").setValue(0);
+                    databaseReference.child("raw_data").child("battery_level").setValue(0);
+                    databaseReference.child("raw_data").child("bpm_level").setValue(0);
+                    databaseReference.child("raw_data").child("spo2_level").setValue(0);
+                }else{
+                    handler.postDelayed(this, 100);
+                }
+            }
+        },100);
+    }
 
     public void getData(){
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -148,6 +179,8 @@ public class MainActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.M)
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //parameter penentu status device dan gps
+                device_status = true;
                 //get data identitas pengguna alat
                 nama_pengguna = dataSnapshot.child("user_pengguna").getValue(String.class);
                 nama_keluarga = dataSnapshot.child("user_keluarga").getValue(String.class);
